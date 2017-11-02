@@ -2,8 +2,10 @@ package ch.bfh.swos.bookapp.config;
 
 import ch.bfh.swos.bookapp.ConsumerService;
 import ch.bfh.swos.bookapp.ProducerService;
+import ch.bfh.swos.bookapp.StockService;
 import ch.bfh.swos.bookapp.impl.DefaultConsumerService;
 import ch.bfh.swos.bookapp.impl.DefaultProducerService;
+import ch.bfh.swos.bookapp.impl.DefaultStockService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,5 +23,11 @@ public class ServiceConfiguration {
     ConsumerService consumerService() {
         ConsumerService consumerService = new DefaultConsumerService();
         return consumerService;
+    }
+
+    @Bean
+    StockService todoService() {
+        StockService todoService = new DefaultStockService();
+        return  todoService;
     }
 }
