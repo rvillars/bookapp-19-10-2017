@@ -26,8 +26,8 @@ public class ServiceConfiguration {
     }
 
     @Bean
-    StockService todoService() {
-        StockService todoService = new DefaultStockService();
-        return  todoService;
+    StockService stockService() {
+        StockService stockService = new DefaultStockService();
+        return  stockService;
     }
 }
