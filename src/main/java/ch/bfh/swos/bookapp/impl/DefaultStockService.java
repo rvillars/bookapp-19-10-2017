@@ -7,27 +7,27 @@ import java.util.List;
 
 public class DefaultStockService implements StockService {
 
-    private List<String> todoList = new ArrayList<>();
+    private List<String> stock = new ArrayList<>();
 
     public List<String> listProducts() {
-        return  todoList;
+        return stock;
     }
 
     @Override
     public String getProduct(int position) {
-        return todoList.get(position);
+        return stock.get(position);
     }
 
     public String addProduct(String todo) {
-        todoList.add(todo);
+        stock.add(todo);
         return todo;
     }
 
     public void deleteProduct(int position) {
-        todoList.remove(position);
+        stock.remove(position);
     }
 
     public void updateProduct(int position, String todo) {
-        todoList.set(position, todo);
+        stock.set(position, todo);
     }
 }
