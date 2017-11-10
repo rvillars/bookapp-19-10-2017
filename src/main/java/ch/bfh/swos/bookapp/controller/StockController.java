@@ -25,8 +25,8 @@ public class StockController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public @ResponseBody String addProduct(@RequestBody String todo){
-        return storeService.addProduct(todo);
+    public @ResponseBody String addProduct(@RequestBody String product){
+        return storeService.addProduct(product);
     }
 
     @RequestMapping(value = "{position}", method = RequestMethod.DELETE)
@@ -35,7 +35,7 @@ public class StockController {
     }
 
     @RequestMapping(value = "{position}", method = RequestMethod.PUT)
-    public @ResponseBody void updateProduct(@PathVariable int position, @RequestBody String todo){
-        storeService.updateProduct(position, todo);
+    public @ResponseBody void updateProduct(@PathVariable int position, @RequestBody String product){
+        storeService.updateProduct(position, product);
     }
 }

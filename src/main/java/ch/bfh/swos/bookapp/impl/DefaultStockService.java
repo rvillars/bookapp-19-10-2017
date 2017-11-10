@@ -18,16 +18,16 @@ public class DefaultStockService implements StockService {
         return stock.get(position);
     }
 
-    public String addProduct(String todo) {
-        stock.add(todo);
-        return todo;
+    public String addProduct(String product) {
+        stock.add(product);
+        return product;
     }
 
     public void deleteProduct(int position) {
         stock.remove(position);
     }
 
-    public void updateProduct(int position, String todo) {
-        stock.set(position, todo);
+    public void updateProduct(int position, String product) {
+        stock.set(position, product);
     }
 }
